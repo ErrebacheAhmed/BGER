@@ -392,8 +392,10 @@ img {
   margin: auto;
 }
 .client-success-section {
-  padding: 60px 0;
+  padding: 200px 0;
   background: linear-gradient(360deg, #C7F0FD 0%, rgba(255, 255, 255, 0) 100%);
+  position: relative;
+  z-index: 1; /* Ensure this section is above other elements */
 }
 
 .client-success-title {
@@ -420,12 +422,16 @@ img {
   border-radius: 15px;
   padding: 60px;
   text-align: center;
-  position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px;
+  width: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute; /* Ensure absolute positioning */
+  top: 50%; /* Adjust position to be half inside, half outside */
+  z-index: 0; /* Ensure the testimonial box is above other elements */
 }
 
 .testimonial-content {
@@ -1005,6 +1011,7 @@ body {
 /* cursor */
 
 .navigation-menu {
+  margin-top: 17%;
   display: flex;
   justify-content: space-around;
   align-items: center;
