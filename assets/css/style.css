@@ -395,7 +395,7 @@ img {
   padding: 200px 0;
   background: linear-gradient(360deg, #C7F0FD 0%, rgba(255, 255, 255, 0) 100%);
   position: relative;
-  z-index: 1; /* Ensure this section is above other elements */
+  z-index: 0; /* Ensure this section is above other elements */
 }
 
 .client-success-title {
@@ -426,12 +426,12 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 95%;
+  width: 80%;
   left: 50%;
   transform: translateX(-50%);
   position: absolute; /* Ensure absolute positioning */
   top: 50%; /* Adjust position to be half inside, half outside */
-  z-index: 0; /* Ensure the testimonial box is above other elements */
+  z-index: 1; /* Ensure the testimonial box is above other elements */
 }
 
 .testimonial-content {
@@ -523,7 +523,7 @@ img {
   width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 1; /* Assurez-vous que les indicateurs sont au-dessus de la courbe */
+  z-index: 3; /* Ensure indicators are above the curve */
 }
 
 .dot {
