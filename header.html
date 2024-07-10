@@ -290,42 +290,42 @@
             </a>
           </div>
         </div>
-      </div>
-    </section>
-    <div class="row mt-5 position-relative">
-      <div class="col-lg-12 position-relative">
-        <img src="images/Vector 5.png" alt="Curve" class="curve-image" />
-        <div id="testimonial-container" class="testimonial-box position-absolute">
-          <div class="testimonial-content">
-            <img src="images/UP.png" alt="Quotation Marks Left" class="quotation-marks-left" />
-            <div class="testimonial-header">
-              <div class="testimonial-author">
-                <img src="images/delivery1.png" alt="Omar Fikri" class="author-image" />
-                <div class="author-info">
-                  <h5 data-author-name>Omar Fikri</h5>
-                  <p data-author-title>Cosmetics Brand Owner</p>
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <img src="images/Vector 5.png" alt="Curve" class="curve-image" />
+            <div id="testimonial-container" class="testimonial-box">
+              <div class="testimonial-content">
+                <img src="images/UP.png" alt="Quotation Marks Left" class="quotation-marks-left" />
+                <div class="testimonial-header">
+                  <div class="testimonial-author">
+                    <img src="images/delivery1.png" alt="Omar Fikri" class="author-image" />
+                    <div class="author-info">
+                      <h5 data-author-name>Omar Fikri</h5>
+                      <p data-author-title>Cosmetics Brand Owner</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="testimonial-text" data-testimonial-text>
+                  It's a delivery service, we have finally accomplished things that
+                  I have been waiting to get done. I would recommend this service
+                  for anyone trying to get the word out. It has saved me so much
+                  time!
+                </p>
+                <img src="images/DOWN.png" alt="Quotation Marks Right" class="quotation-marks-right" />
+                <div class="slider-indicator">
+                  <span class="dot" onclick="showTestimonial(0)"></span>
+                  <span class="dot active" onclick="showTestimonial(1)"></span>
+                  <span class="dot" onclick="showTestimonial(2)"></span>
+                  <span class="dot" onclick="showTestimonial(3)"></span>
+                  <span class="dot" onclick="showTestimonial(4)"></span>
                 </div>
               </div>
             </div>
-            <p class="testimonial-text" data-testimonial-text>
-              It's a delivery service, we have finally accomplished things that
-              I have been waiting to get done. I would recommend this service
-              for anyone trying to get the word out. It has saved me so much
-              time!
-            </p>
-            <img src="images/DOWN.png" alt="Quotation Marks Right" class="quotation-marks-right" />
-            <div class="slider-indicator">
-              <span class="dot" onclick="showTestimonial(0)"></span>
-              <span class="dot active" onclick="showTestimonial(1)"></span>
-              <span class="dot" onclick="showTestimonial(2)"></span>
-              <span class="dot" onclick="showTestimonial(3)"></span>
-              <span class="dot" onclick="showTestimonial(4)"></span>
-            </div>
           </div>
         </div>
-      </div>
-    </div>
-    
+          
+        </div>
+      </section>
       
       
     <section class="section delivery-section">
@@ -666,6 +666,63 @@
     
       // Initialiser avec le premier témoignage
       showTestimonial(0);
+      // cursor
+      document.addEventListener('DOMContentLoaded', () => {
+    let currentIndex = 2; // Index of the initially active item
+    const items = document.querySelectorAll('.menu-item');
+    const itemCount = items.length;
+
+    function updateOpacity() {
+        items.forEach((item, index) => {
+            item.classList.remove('active');
+            item.style.opacity = '0.5';
+            item.style.transition = 'opacity 0.3s';
+        });
+
+        items[currentIndex].classList.add('active');
+        items[currentIndex].style.opacity = '1';
+
+        const leftIndex1 = (currentIndex - 1 + itemCount) % itemCount;
+        const rightIndex1 = (currentIndex + 1) % itemCount;
+        items[leftIndex1].style.opacity = '0.8';
+        items[rightIndex1].style.opacity = '0.8';
+
+        const leftIndex2 = (currentIndex - 2 + itemCount) % itemCount;
+        const rightIndex2 = (currentIndex + 2) % itemCount;
+        items[leftIndex2].style.opacity = '0.5';
+        items[rightIndex2].style.opacity = '0.5';
+    }
+
+    function nextItem() {
+        currentIndex = (currentIndex + 1) % itemCount;
+        updateOpacity();
+    }
+
+    // Click event
+    items.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            currentIndex = index;
+            updateOpacity();
+        });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+            nextItem();
+        } else if (e.key === 'ArrowLeft') {
+            currentIndex = (currentIndex - 1 + itemCount) % itemCount;
+            updateOpacity();
+        }
+    });
+
+    // Initial opacity setup
+    updateOpacity();
+});
+
+
+
+      // cursor
     </script>
     
   </body>
