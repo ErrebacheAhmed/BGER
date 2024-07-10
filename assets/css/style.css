@@ -1002,3 +1002,41 @@ body {
   padding: 10px;
   text-align: left;
 }
+/* cursor */
+
+.navigation-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #fdfdf6;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  color: #ccc;
+  opacity: 0.5;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.menu-item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.menu-item span {
+  font-size: 14px;
+}
+
+.menu-item.active {
+  color: #3b4a54;
+  opacity: 1;
+}
+
+.menu-item:hover {
+  cursor: pointer;
+  color: #3b4a54;
+}
+/* cursor */

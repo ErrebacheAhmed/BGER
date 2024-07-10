@@ -326,7 +326,15 @@
         </div>
           
         </div>
-      </section>
+    </section>
+    <div class="navigation-menu">
+      <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Layers</span></div>
+      <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Sisyphus</span></div>
+      <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Circooles</span></div>
+      <div class="menu-item active"><img src="images/Company logo.png" alt="icon"><span>Catalog</span></div>
+      <div class="menu-item"><img src="images/Company logo.png" alt="icon"><span>Sisyphus</span></div>
+      
+  </div>
       
       
     <section class="section delivery-section">
@@ -667,6 +675,63 @@
     
       // Initialiser avec le premier témoignage
       showTestimonial(0);
+      // cursor
+      document.addEventListener('DOMContentLoaded', () => {
+    let currentIndex = 2; // Index of the initially active item
+    const items = document.querySelectorAll('.menu-item');
+    const itemCount = items.length;
+
+    function updateOpacity() {
+        items.forEach((item, index) => {
+            item.classList.remove('active');
+            item.style.opacity = '0.5';
+            item.style.transition = 'opacity 0.3s';
+        });
+
+        items[currentIndex].classList.add('active');
+        items[currentIndex].style.opacity = '1';
+
+        const leftIndex1 = (currentIndex - 1 + itemCount) % itemCount;
+        const rightIndex1 = (currentIndex + 1) % itemCount;
+        items[leftIndex1].style.opacity = '0.8';
+        items[rightIndex1].style.opacity = '0.8';
+
+        const leftIndex2 = (currentIndex - 2 + itemCount) % itemCount;
+        const rightIndex2 = (currentIndex + 2) % itemCount;
+        items[leftIndex2].style.opacity = '0.5';
+        items[rightIndex2].style.opacity = '0.5';
+    }
+
+    function nextItem() {
+        currentIndex = (currentIndex + 1) % itemCount;
+        updateOpacity();
+    }
+
+    // Click event
+    items.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            currentIndex = index;
+            updateOpacity();
+        });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+            nextItem();
+        } else if (e.key === 'ArrowLeft') {
+            currentIndex = (currentIndex - 1 + itemCount) % itemCount;
+            updateOpacity();
+        }
+    });
+
+    // Initial opacity setup
+    updateOpacity();
+});
+
+
+
+      // cursor
     </script>
     
   </body>
