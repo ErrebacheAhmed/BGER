@@ -101,7 +101,6 @@ body {
   position: relative;
   z-index: 2;
   padding-top: 20px; /* Adjust padding if necessary */
-  padding-bottom: 20px; /* Adjust padding if necessary */
 }
 
 .hero-section h1 {
@@ -362,7 +361,7 @@ img {
 }
 
 .bg-desk-yellow {
-  padding: 200px 0;
+  padding: 177px  0;
   background-color: var(--secondary-color);
 }
 
