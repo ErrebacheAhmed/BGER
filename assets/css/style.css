@@ -376,14 +376,16 @@ img {
   z-index: 1;
 }
 .border-dotted-around-gp {
-  width: 100%;
-  height: 320px;
-  background: url(../../images/around-border.png) no-repeat top center;
-  position: absolute;
-  /* top: -38%; */
-  background-size: cover;
-  z-index: 1;
+  transform: scale(1.3);
+    width: 76%;
+    height: 320px;
+    background: url(../../images/Vector\ contacter\ Nous.png) no-repeat top center;
+    position: absolute;
+    top: 4.5%;
+    background-size: contain;
+    z-index: 0;
 }
+
 
 .desk-image img {
   position: absolute;
@@ -867,6 +869,7 @@ img {
   margin-bottom: 20px;
   margin-top: 50px;
 }
+
 .custom-border-left {
   border-radius: 10px 0 0 10px;
 }
@@ -1052,6 +1055,8 @@ body {
   color: white;
   padding: 50px 0;
   text-align: center;
+  position: relative;
+  min-height: 700px;
 }
 
 
@@ -1063,14 +1068,23 @@ body {
   margin-bottom: 30px;
 }
 
-.second-section .flag-container {
-  position: relative;
-  margin-bottom: 30px;
+.second-section .flag-background {
+  background: url('../../images/drapaux.png') no-repeat left center;
+  background-size: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.second-section .flag-container img {
-  width: 100%;
-  margin: 0 auto;
+.second-section .text-table-container {
+  position: absolute;
+  right: 10%;
+  bottom: -35%;
+  height: 600px;
+  z-index: 3;
+  min-width: 35%;
 }
 
 .second-section .table-container {
@@ -1080,16 +1094,101 @@ body {
   padding: 20px;
   max-width: 700px;
   margin: 0 auto;
+  border-radius: 35px;
 }
 
 .second-section table {
   width: 100%;
+  margin-top: 40px;
 }
 
-.second-section table th,
-.second-section table td {
-  padding: 10px;
+.field-search {
+  max-width: 60%;
+  margin: 10px auto 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-group-text {
+  background-color: transparent;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-color: #6699DE;
+}
+
+.form-control.search-input {
+  border-radius: 0 0.375rem 0.375rem 0;
+  border-left: none;
+  box-shadow: none;
+  padding: 10px 16px;
+  border-color: #6699DE;
+}
+
+.form-control.search-input .bi-search {
+  font-size: 16px;
+}
+
+.input-group-prepend {
+  display: flex;
+  align-items: center;
+}
+
+
+.table th {
+  background-color: #f8f9fa;
+  color: #0080FF;
+  font-weight: bold;
+  border-top: none;
+}
+
+.table th, .table td {
   text-align: left;
+  vertical-align: middle;
+  padding: 12px 15px;
+  border: none;
+  background: none;
+}
+
+.table tr {
+  border-top: none;
+}
+
+.table td {
+  font-weight: 600;
+}
+
+.pagination .page-link {
+  color: #1419B5;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #cccccc;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #1419B5;
+  border: none;
+  color: #fff;
+}
+
+.pagination .page-link i {
+  font-size: 16px;
+}
+
+.input-group-text {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-control {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-left: none;
 }
 /* cursor */
 
