@@ -1,3 +1,4 @@
+
 /* Variables */
 :root {
   --primary-color: #010cee;
@@ -932,7 +933,9 @@ img {
 .contact-form .form-group {
   margin-bottom: 20px;
 }
-
+.form-row .form-group {
+  flex: 0 0 48%;
+}
 .contact-form .form-group label {
   display: block;
   margin-bottom: 5px;
@@ -944,18 +947,23 @@ img {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 .contact-form .btn-primary {
-  background-color: var(--primary-color);
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: blue;
+  color: white;
   border: none;
-  color: var(--white-color);
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
+  display: block;
 }
-
+.btn-primary:hover {
+  background-color: darkblue;
+}
 .contact-form .btn-primary:hover {
   background-color: darken(var(--primary-color), 10%);
 }
