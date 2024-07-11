@@ -336,6 +336,7 @@ img {
 }
 
 .btn-primary {
+  margin-left: 0px;
   background-color: #010cee;
   border-color: #010cee;
   padding: 0.75rem 2rem;
@@ -352,7 +353,7 @@ img {
 
 .arrow-icon {
     margin-left: 0.5rem;
-    color: #d9ff00;
+    color: white;
 }
 
 .desk-image {
@@ -561,30 +562,33 @@ img {
 }
 
 .delivery-section h2 {
-  color: #001e80;
-  font-size: 24px;
-  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 41.61px;
+  text-align: left;
+  color: #0500FF;
 }
-
 .delivery-section p {
+  margin-top: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px; /* Ajustez la taille selon vos besoins */
+  line-height: 24px; /* Ajustez la hauteur de ligne selon vos besoins */
+  text-align: left;
   color: #4a4a4a;
-  margin-bottom: 15px;
+}
+.delivery-section .secondParagraph{
+  color:  #1044FC;
+  ;
 }
 
-.delivery-section .btn-primary {
-  background-color: #001e80;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-}
 
 .delivery-section .btn-primary:hover {
   background-color: #0056b3;
 }
 
 .delivery-section .img-fluid {
+  margin-top: 30px;
   max-width: 100%;
   height: auto;
 }
@@ -803,7 +807,7 @@ img {
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 35px;
   margin-bottom: 20px;
   margin-top: 50px;
 }
