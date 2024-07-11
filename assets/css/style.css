@@ -933,6 +933,10 @@ img {
 .contact-form .form-group {
   margin-bottom: 20px;
 }
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
 .form-row .form-group {
   flex: 0 0 48%;
 }
@@ -945,12 +949,14 @@ img {
 .contact-form .form-control {
   width: 100%;
   padding: 10px;
-  border-radius: 5px;
+  font-size: 16px;
   border: 1px solid #ccc;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 
 .contact-form .btn-primary {
+  display: block;
   width: 100%;
   padding: 10px;
   font-size: 18px;
@@ -959,7 +965,6 @@ img {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  display: block;
 }
 .btn-primary:hover {
   background-color: darkblue;
